@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-section input {
+    width: 100%;
+}
+
+.todo-input {
+    display: flex;
+    gap: 8px;
+}
+
+input {
+    padding: .4rem 1rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+button {
+    cursor: pointer;
+    padding: .4rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: greenyellow;
+    color: rgb(35, 4, 4);
+}
+

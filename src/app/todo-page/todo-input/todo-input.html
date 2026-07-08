@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="todo-input">
+    <input #addInput type="text">
+    <button (click)="onAddTodo(addInput.value)">Add Todo</button>
+  </div>
+  <div class="search-section">
+    <input #searchInput type="text" (input)="onSearch(searchInput.value)">
+  </div>
+</div>
