@@ -1,4 +1,7 @@
 <div class="todo-item">
   <p>{{ todo }}</p>
-  <button (click)="onRemoveTodo()">Delete</button>
+  <div class="btns">
+    <button class="completed-btn">✓</button>
+    <button (click)="onRemoveTodo()" class="delete-btn">x</button>
+  </div>
 </div>

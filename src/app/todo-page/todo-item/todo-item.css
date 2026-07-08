@@ -6,7 +6,7 @@
     padding: 12px 16px;
     margin-bottom: 10px;
 
-    background: #ffffff;
+    background: #f3fcef;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
 
@@ -22,27 +22,46 @@
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     color: #111827;
     flex: 1;
     word-break: break-word;
 }
 
-button {
+.btns {
+    display: flex;
+    gap: 5px;
+}
+
+.completed-btn {
+    border-radius: 50%;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid rgb(16, 172, 16);
+    background-color: rgb(15, 188, 15);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.delete-btn {
     padding: 0.45rem 0.8rem;
-    border-radius: 6px;
-    border: 1px solid #fecaca;
-    background: transparent;
-    color: #dc2626;
-    font-size: 0.9rem;
+    border-radius: 50%;
+    border: 1px solid #dc2626;
+    background-color: #dc2626;
+    color: white;
+    font-size: 1.1rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
-button:hover {
-    background: #fee2e2;
-    border-color: #dc2626;
+.delete-btn:hover {
+    background: #ee6767;
+}
+
+.completed-btn:hover {
+    cursor: pointer;
+    background-color: rgb(2, 167, 2);
 }
 
 button:active {

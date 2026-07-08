@@ -3,7 +3,5 @@
     <input #addInput type="text">
     <button (click)="onAddTodo(addInput.value)">Add Todo</button>
   </div>
-  <div class="search-section">
-    <input #searchInput type="text" (input)="onSearch(searchInput.value)">
-  </div>
+  <input class="search-input" #searchInput type="text" (input)="onSearch(searchInput.value)">
 </div>
