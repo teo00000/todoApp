@@ -1,5 +1,5 @@
 <div class="page">
   <app-todo-input (search)="onSearch($event)" (addTodo)="onAddTodo($event)"></app-todo-input>
-  <app-todo-list [todos]="(this.todoService.filteredTodos$ | async) || []" (deleteTodo)="onRemoveTodo($event)">
+  <app-todo-list [todos]="(this.todoService.filteredTodos$ | async) || []" (removeTodo)="onRemoveTodo($event)">
   </app-todo-list>
 </div>

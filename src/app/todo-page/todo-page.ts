@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { TodoInput } from './todo-input/todo-input';
 import { TodoList } from './todo-list/todo-list';
 import { TodoService } from './todo-service';
-import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
@@ -13,11 +12,10 @@ import { AsyncPipe } from '@angular/common';
   styleUrl: './todo-page.css',
 })
 export class TodoPage {
-  todos$!: Observable<string[]>;
 
-  constructor(public todoService: TodoService) {
-    this.todos$ = this.todoService.filteredTodos$;
-  }
+  public todoService = inject(TodoService);
+
+  todos$ = this.todoService.filteredTodos$;
 
   currentSearch = '';
 
@@ -31,6 +29,6 @@ export class TodoPage {
   }
 
   onRemoveTodo(todo: string) {
-    
+    this.todoService.removeTodo(todo);
   }
 }
